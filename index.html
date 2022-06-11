@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https:// kit-pro.fontawesome.com/releases/v6.1.1/css/pro.min.css"
+  rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost&family=Orbitron&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo"><img src="/img/logo.png" alt="" srcset=""></div>
+      <nav id="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <svg onclick="menuShow()" onblur="menuClose()" id="burger" fill=" #fff" viewBox="0 0 448 512" title="bars">
+        <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+      </svg>
+    </div>
+  </header>
+ 
+  <!-- Canvas -->
+  <canvas class="orb-canvas"></canvas>
+  <!-- Overlay -->
+  <div class="overlay">
+    <!-- Overlay inner wrapper -->
+    <div class="overlay__inner">
+      <!-- Title -->
+      <h1 class="overlay__title">
+        Welcome to SPARKS FOUNDATION Bank
+      </h1>
+      <img src="/img/bank.png" alt="" srcset="">
+      <!-- Description -->
+      <p class="overlay__description">
+        Prioritizing simplicity and flexibility that makes each of your transaction more stylish
+      </p>
+      
+<div class="overlay__description">
+  <button id="checkout" class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="chintanudani" data-color="#5F7FFF" data-emoji="🍀"  data-font="Lato" data-text="Donate US" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script></button>
+</div>
+    
+      <!-- Buttons -->
+    
+    </div>
+
+  </div>
+
+  
+</div>
+  <section class="card-main">
+    <div class="mulcards">
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 lg:w-1/2">
+
+              <div class="h-full bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                <img class="img-1" src="/img/bank-file.png" alt="" srcset="">
+                <h2 class="tracking-widest text-lg title-font font-large text-white-800 mb-1">ATOMICITY</h2>
+                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3"> </h1>
+                <p class="leading-relaxed mb-3">Our transactions are fully atomic with significant chances of failure.
+                </p>
+
+                <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="p-4 lg:w-1/2">
+              <div
+                class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                <img class="img-1" src="/img/bank-locker.png" alt="" srcset="">
+                <h2 class="tracking-widest text-lg title-font font-larger text-white-800 mb-1">FLEXIBILITY</h2>
+                <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3"></h1>
+                <p class="leading-relaxed mb-3">We provide world-wide, cross platform and hassle-free payments.</p>
+
+                <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <script src="/script.js"></script>
+  <script>
+    ScrollReveal().reveal('.headline')
+    ScrollReveal().reveal('.card-main', {
+      delay: 500,
+      distance: '500px',
+      duration: 2000,
+      reset: true
+    })
+  </script>
+
+  <script>
+    function menuShow() {
+      document.getElementById("menu").classList.toggle("show");
+      
+    }
+    function menuClose() {
+      document.getElementById("menu").classList.remove("show");
+    }
+  </script>
+
+  <script>
+    const cartButtons = document.querySelectorAll('.cart-button');
+
+cartButtons.forEach(button => {
+	button.addEventListener('click', cartClick);
+});
+
+function cartClick() {
+	let button = this;
+	button.classList.add('clicked');
+}
+  </script>
+
+
+
+
+
+</body>
+
+</html>
