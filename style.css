@@ -402,3 +402,22 @@ a {
     height: auto;
     margin-top: -2vw;
 }
+
+.checkout{
+    font-size: 16px;
+}
+.checkout .chk{
+
+    text-align: justify !important;
+    margin-left: 40vw !important;
+}
+.checkout label {
+    color: rgb(255, 255, 255) !important;
+    text-align:justify !important;
+}
+.checkout .inpt{
+   display: block;
+   color: #000;
+}
+
+
